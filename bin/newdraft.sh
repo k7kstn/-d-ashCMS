@@ -1,0 +1,10 @@
+#!/bin/sh
+
+draftdir=$(dirname $0)/../drafts
+docdir="$draftdir/$1"
+
+mkdir "$docdir" || exit 1
+
+echo "<h1>title</h1>"  > $docdir/html
+echo "未分類"  > $docdir/categories
+
